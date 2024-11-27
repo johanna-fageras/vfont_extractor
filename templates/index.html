@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Instance Extractor</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:wght@400;600&family=Red+Hat+Display:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/custom.css">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <!-- Header -->
+    <header class="text-center mb-5">
+      <h1 class="text-primary">Johanna's Font Tools</h1>
+      <p class="text-muted">Extract predefined instances from a variable font.</p>
+    </header>
+
+    <!-- Upload Form -->
+    <main class="bg-light p-4 rounded shadow-sm mx-auto" style="max-width: 600px;">
+      <h4 class="text-secondary mb-4">Upload Variable Font</h4>
+      <form id="uploadForm" action="/extract" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="fileInput" class="form-label">Upload a variable ttf font:</label>
+          <input type="file" id="fileInput" name="file" accept=".ttf" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Extract Instances</button>
+      </form>
+      <div id="result" class="text-center mt-3 text-muted"></div>
+      <div class="mt-4 text-center">
+        <h5 class="text-secondary mb-3">Explore More Font Tools</h5>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="/font-converter" class="btn btn-outline-primary">Font Converter</a>
+          <a href="/font-optimizer" class="btn btn-outline-success">Font Optimizer</a>
+          <a href="/font-subsetter" class="btn btn-outline-warning">Font Subsetter</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5 text-muted">
+      &copy; 2024 Font Tools. All rights reserved.
+    </footer>
+  </div>
+
+  <script src="static/js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
